@@ -1,0 +1,13 @@
+#Used to reset configuration state to the one found on git and rebuild
+- hosts: "*"
+  become: yes
+  tasks:
+    - name: Fetch and reset
+      shell: git fetch && git reset --hard HEAD
+      args:
+        chdir: /MonitoringStack
+
+    - name: Rebuild docker containers
+      shell: docker compose up -d --build
+      args:
+        chdir: /MonitoringStack/SimpleDeployment
