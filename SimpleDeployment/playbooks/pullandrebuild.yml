@@ -1,0 +1,13 @@
+#Used on machines with LVM to allow them to use all free space available
+- hosts: "*"
+  become: yes
+  tasks:
+    - name: Fetch and pull changes
+      shell: git fetch && git pull
+      args:
+        chdir: /MonitoringStack
+
+    - name: Rebuild docker containers
+      shell: docker compose up -d --build
+      args:
+        chdir: /MonitoringStack/SimpleDeployment
