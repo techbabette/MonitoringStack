@@ -1,4 +1,4 @@
-#Used on machines with LVM to allow them to use all free space available
+#Used to pull changes found on git and rebuild
 - hosts: "*"
   become: yes
   tasks:
