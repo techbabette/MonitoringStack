@@ -141,14 +141,6 @@ resource "aws_vpc_security_group_ingress_rule" "allow_public_grafana" {
   to_port           = 3000
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_public_ssh" {
-  security_group_id = aws_security_group.public_grafana.id
-  cidr_ipv4         = "0.0.0.0/0"
-  from_port         = 22
-  ip_protocol       = "tcp"
-  to_port           = 22
-}
-
 resource "aws_vpc_security_group_ingress_rule" "allow_private_prometheus" {
   security_group_id = aws_security_group.private_prometheus.id
   cidr_ipv4         = aws_vpc.main.cidr_block
