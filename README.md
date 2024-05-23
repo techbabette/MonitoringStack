@@ -16,8 +16,6 @@ The resulting graph can be viewed [here](http://91.107.230.206:3000/d/rYdddlPWk/
 
 ## [AWS Deployment](https://github.com/techbabette/MonitoringStack/tree/main/AWSDeployment)
 
-Currently not implemented.
-
 ### Architecture
 
 The architecture shown below is created with a single terraform apply.
