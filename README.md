@@ -2,7 +2,7 @@
 
 This repo contains two different deployment options for my monitoring stack, both work out of the box with terraform apply.
 
-The resulting graph can be viewed [here](http://91.107.230.206:3000/d/rYdddlPWk/node-exporter-full?orgId=1&refresh=1m&from=now-5m&to=now).
+The resulting graph can be viewed [here](https://monitor.techbabette.com/d/rYdddlPWk/node-exporter-full?orgId=1&refresh=1m).
 
 ## [Simple deployment](https://github.com/techbabette/MonitoringStack/tree/main/SimpleDeployment)
 
