@@ -20,7 +20,7 @@ Two ansible playbooks are available for [updating](https://github.com/techbabett
 
 The architecture shown below is created with a single terraform apply.
 
-![Architecture](https://i.imgur.com/OBr1bfr.png "Architecture")
+![Architecture](https://i.imgur.com/uW90rja.png "Architecture")
 
 The Prometheus and Grafana EC2 instances can communicate as they are in the same VPC.
 
