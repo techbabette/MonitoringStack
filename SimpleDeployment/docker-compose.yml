@@ -28,6 +28,7 @@ services:
     container_name: ntfy
     environment:
       - NTFY_ENABLE_LOGIN=true
+      - NTFY_AUTH_FILE=/var/cache/ntfy/auth
     command:
       - serve
     ports:
