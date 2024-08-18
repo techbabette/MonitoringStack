@@ -26,11 +26,19 @@ services:
   ntfy:
     image: binwiederhier/ntfy
     container_name: ntfy
+    environment:
+      - NTFY_AUTH_DEFAULT_ACCESS: deny-all
+      - NTFY_ENABLE_LOGIN: true
     command:
       - serve
     ports:
       - 6520:80
     restart: unless-stopped
+    volumes:
+      - ntfy_config:/etc/ntfy
+      - ntfy_cache:/var/cache/ntfy
 volumes:
   prom_data:
   grafana_data:
+  ntfy_config:
+  ntfy_cache:
