@@ -27,8 +27,7 @@ services:
     image: binwiederhier/ntfy
     container_name: ntfy
     environment:
-      - NTFY_AUTH_DEFAULT_ACCESS: deny-all
-      - NTFY_ENABLE_LOGIN: true
+      - NTFY_ENABLE_LOGIN=true
     command:
       - serve
     ports:
