@@ -28,7 +28,8 @@ services:
     container_name: ntfy
     environment:
       - NTFY_ENABLE_LOGIN=true
-      - NTFY_AUTH_FILE=/var/cache/ntfy/auth
+      - NTFY_AUTH_FILE=/var/lib/ntfy_auth.db
+      - NTFY_AUTH_DEFAULT_ACCESS=deny-all
     command:
       - serve
     ports:
@@ -37,8 +38,10 @@ services:
     volumes:
       - ntfy_config:/etc/ntfy
       - ntfy_cache:/var/cache/ntfy
+      - ntfy_auth:/var/lib/ntfy_auth.db
 volumes:
   prom_data:
   grafana_data:
   ntfy_config:
   ntfy_cache:
+  ntfy_auth:
