@@ -8,6 +8,6 @@
         chdir: /MonitoringStack
 
     - name: Rebuild docker containers
-      shell: docker compose up --profile nginx up -d --build
+      shell: docker compose --profile nginx up -d --build
       args:
         chdir: /MonitoringStack/SimpleDeployment
