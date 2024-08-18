@@ -29,7 +29,7 @@ services:
     command:
       - serve
     ports:
-      - 6000:80
+      - 6520:80
     restart: unless-stopped
 volumes:
   prom_data:
