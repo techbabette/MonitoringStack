@@ -1,0 +1,13 @@
+#Used to pull changes found on git and rebuild
+- hosts: "*"
+  become: yes
+  tasks:
+    - name: Fetch and pull changes
+      shell: git fetch && git pull
+      args:
+        chdir: /MonitoringStack
+
+    - name: Rebuild docker containers
+      shell: docker compose up --profile nginx -d --build
+      args:
+        chdir: /MonitoringStack/SimpleDeployment
