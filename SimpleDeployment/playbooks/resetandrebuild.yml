@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: Fetch and reset
-      shell: git fetch && git reset --hard HEAD
+      shell: git fetch && git reset --hard HEAD && git pull
       args:
         chdir: /MonitoringStack
 
